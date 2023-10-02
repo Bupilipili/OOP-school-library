@@ -8,6 +8,14 @@ class Person
       @parent_permission = parent_permission
     end
   
+    def name=(name)
+      @name = name
+    end
+  
+    def age=(age)
+      @age = age
+    end
+  
     private
   
     def of_age?
