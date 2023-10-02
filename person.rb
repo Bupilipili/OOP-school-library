@@ -25,5 +25,5 @@ class Person
     def generate_id
       # Implement your ID generation logic here
     end
-  end
+end
   
