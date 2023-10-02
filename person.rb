@@ -8,8 +8,6 @@ class Person
       @parent_permission = parent_permission
     end
   
-    attr_writer :name, :age
-  
     private
   
     def of_age?
@@ -27,4 +25,5 @@ class Person
     def generate_id
       # Implement your ID generation logic here
     end
-end 
+end
+  
