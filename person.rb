@@ -1,9 +1,11 @@
-class Person
+require_relative 'nameable'
+
+class Person < Nameable
   attr_accessor :name, :age
   attr_reader :id
 
   def initialize(name: 'Unknown', age: nil, parent_permission: true)
-    super() # Call super to initialize the parent class
+    super() # Call the parent class (Nameable) constructor
     @id = generate_id
     @name = name
     @age = age
@@ -12,19 +14,13 @@ class Person
 
   private
 
-  def of_age?
-    @age >= 18
+  def generate_id
+    # Implement your ID generation logic here
   end
 
   public
 
-  def can_use_services?
-    of_age? || @parent_permission
-  end
-
-  private
-
-  def generate_id
-    # Implement your ID generation logic here
+  def correct_name
+    @name
   end
 end
