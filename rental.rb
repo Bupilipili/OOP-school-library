@@ -6,7 +6,9 @@ class Rental
     @book = book
     @person = person
     @date = date
-    book.rentals << self
-    person.rentals << self
+
+    # Modify the associations
+    @book.add_rental(self)
+    @person.add_rental(self)
   end
 end
