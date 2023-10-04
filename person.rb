@@ -33,4 +33,8 @@ class Person < Nameable
   def generate_id
     # Implement your ID generation logic here
   end
+
+  def add_rental(rental)
+    @rentals << rental
+  end
 end
