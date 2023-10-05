@@ -8,7 +8,7 @@ class App
 
     loop do
       display_menu
-      choice = get_user_choice
+      choice = user_choice
       break if choice == 7
 
       execute_choice(choice)
