@@ -5,7 +5,7 @@ class Person < Nameable
   attr_accessor :name, :age
   attr_reader :id, :rentals
 
-  def initialize(name: 'Unknown', age: nil, parent_permission: true)
+  def initialize(age, name: 'Unknown', parent_permission: true)
     super() # Call super to initialize state of the parent class (Nameable)
     @id = generate_id
     @name = name
